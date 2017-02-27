@@ -15,7 +15,8 @@ class View {
         View();
         ViewObserver *observer;
         void PromptUser();
-        void PrintItems(std::list< std::tuple<float, float> > items);
+        void pegJump(char array[]);
+//        void PrintItems();
 
     private:
 };
