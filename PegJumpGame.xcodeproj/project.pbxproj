@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCB880871E6496DA00D7F7ED /* PegJumpGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880861E6496DA00D7F7ED /* PegJumpGame.cpp */; };
+		FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB8809B1E64A4F300D7F7ED /* Controller.cpp */; };
+		FCB880A61E64A4F300D7F7ED /* KnapsackGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB8809D1E64A4F300D7F7ED /* KnapsackGenerator.cpp */; };
+		FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */; };
+		FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A31E64A4F300D7F7ED /* View.cpp */; };
+		FCB880B11E64A75400D7F7ED /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880B01E64A75400D7F7ED /* Main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +28,17 @@
 
 /* Begin PBXFileReference section */
 		FCB880831E6496DA00D7F7ED /* PegJumpGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PegJumpGame; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCB880861E6496DA00D7F7ED /* PegJumpGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PegJumpGame.cpp; sourceTree = "<group>"; };
+		FCB8809B1E64A4F300D7F7ED /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		FCB8809C1E64A4F300D7F7ED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		FCB8809D1E64A4F300D7F7ED /* KnapsackGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KnapsackGenerator.cpp; sourceTree = "<group>"; };
+		FCB8809E1E64A4F300D7F7ED /* KnapsackGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnapsackGenerator.h; sourceTree = "<group>"; };
+		FCB880A01E64A4F300D7F7ED /* RandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGenerator.h; sourceTree = "<group>"; };
+		FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomNumberGeneratorImpl.cpp; sourceTree = "<group>"; };
+		FCB880A21E64A4F300D7F7ED /* RandomNumberGeneratorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGeneratorImpl.h; sourceTree = "<group>"; };
+		FCB880A31E64A4F300D7F7ED /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		FCB880A41E64A4F300D7F7ED /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		FCB880AA1E64A51100D7F7ED /* mainTest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mainTest; path = ../mainTest; sourceTree = "<group>"; };
+		FCB880B01E64A75400D7F7ED /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,17 @@
 		FCB880851E6496DA00D7F7ED /* PegJumpGame */ = {
 			isa = PBXGroup;
 			children = (
-				FCB880861E6496DA00D7F7ED /* PegJumpGame.cpp */,
+				FCB880AA1E64A51100D7F7ED /* mainTest */,
+				FCB880B01E64A75400D7F7ED /* Main.cpp */,
+				FCB8809B1E64A4F300D7F7ED /* Controller.cpp */,
+				FCB8809C1E64A4F300D7F7ED /* Controller.h */,
+				FCB8809D1E64A4F300D7F7ED /* KnapsackGenerator.cpp */,
+				FCB8809E1E64A4F300D7F7ED /* KnapsackGenerator.h */,
+				FCB880A01E64A4F300D7F7ED /* RandomNumberGenerator.h */,
+				FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */,
+				FCB880A21E64A4F300D7F7ED /* RandomNumberGeneratorImpl.h */,
+				FCB880A31E64A4F300D7F7ED /* View.cpp */,
+				FCB880A41E64A4F300D7F7ED /* View.h */,
 			);
 			path = PegJumpGame;
 			sourceTree = "<group>";
@@ -119,7 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCB880871E6496DA00D7F7ED /* PegJumpGame.cpp in Sources */,
+				FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */,
+				FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */,
+				FCB880A61E64A4F300D7F7ED /* KnapsackGenerator.cpp in Sources */,
+				FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */,
+				FCB880B11E64A75400D7F7ED /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +274,7 @@
 				FCB8808C1E6496DA00D7F7ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
