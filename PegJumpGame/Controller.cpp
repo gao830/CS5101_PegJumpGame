@@ -5,8 +5,8 @@
 #include "Controller.h"
 using namespace std;
 
-Controller::Controller(View &inView, KnapsackGenerator &inGenerator): view(inView), generator(inGenerator) {
-    view.observer = this; 
+Controller::Controller(View &view) {
+    this->view = view;
 }
 
 void Controller::go() {
@@ -14,22 +14,24 @@ void Controller::go() {
     regex exit("(e|E)(x|X)(i|I)(t|T)");
     
     view.PromptUser();
-    
-    cin >> selection;
-    
-    if(selection == "1"){
-        pegJumpController(arrayOfElements);
-//        PromptUser();
+    while (!regex_match(selection,exit)) {
+        cin >> selection;
+        
+        if(selection == "1"){
+            pegJumpController(arrayOfElements);
+            view.PromptUser();
+            
+        }
+        
+        else if(regex_match(selection,exit)){
+            cout << "Exit" << endl;
+        }
+        else{
+            view.PromptUser();
+        }
+        
         
     }
-    
-    else if(regex_match(selection,exit)){
-        cout << "Exit" << endl;
-    }
-    else{
-        view.PromptUser();
-    }
-
 }
 
 void Controller::pegJumpController(char array[]){
@@ -39,6 +41,6 @@ void Controller::pegJumpController(char array[]){
 
 // View Observer
 void Controller::itemsRequested(int numItems) {
-    std::list< std::tuple<float, float> > items = generator.getItems(numItems);
-//    view.PrintItems(items);
+    //    std::list< std::tuple<float, float> > items = generator.getItems(numItems);
+    //    view.PrintItems(items);
 }

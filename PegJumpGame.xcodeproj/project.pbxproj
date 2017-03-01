@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0DC5901E674F99000DAD6F /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0DC58E1E674F99000DAD6F /* Model.cpp */; };
 		FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB8809B1E64A4F300D7F7ED /* Controller.cpp */; };
 		FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */; };
 		FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A31E64A4F300D7F7ED /* View.cpp */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC0DC58E1E674F99000DAD6F /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		FC0DC58F1E674F99000DAD6F /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		FCB880831E6496DA00D7F7ED /* PegJumpGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PegJumpGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB8809B1E64A4F300D7F7ED /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		FCB8809C1E64A4F300D7F7ED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 			children = (
 				FCB880AA1E64A51100D7F7ED /* mainTest */,
 				FCB880B01E64A75400D7F7ED /* Main.cpp */,
+				FC0DC58E1E674F99000DAD6F /* Model.cpp */,
+				FC0DC58F1E674F99000DAD6F /* Model.h */,
 				FCB8809B1E64A4F300D7F7ED /* Controller.cpp */,
 				FCB8809C1E64A4F300D7F7ED /* Controller.h */,
 				FCB880A01E64A4F300D7F7ED /* RandomNumberGenerator.h */,
@@ -140,6 +145,7 @@
 			files = (
 				FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */,
 				FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */,
+				FC0DC5901E674F99000DAD6F /* Model.cpp in Sources */,
 				FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */,
 				FCB880B11E64A75400D7F7ED /* Main.cpp in Sources */,
 			);

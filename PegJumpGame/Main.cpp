@@ -4,10 +4,11 @@
 //
 #include <iostream>
 #include <regex>
+#include <map>
 #include "RandomNumberGeneratorImpl.h"
-#include "KnapsackGenerator.h"
 #include "View.h"
 #include "Controller.h"
+
 using namespace std;
 
 void playGames();
@@ -16,9 +17,12 @@ void pegJump();
 int main(int argc, const char * argv[]) {
     
     RandomNumberGeneratorImpl gen(rand, srand);
-    KnapsackGenerator knapsack(gen);
+    map<char,int> mymap;
+    
+    // first insert function version (single parameter):
+    mymap.insert ( std::pair<char,int>('a',100) );
     View view;
-    Controller controller(view, knapsack);
+    Controller controller(view);
     
     controller.go();
     

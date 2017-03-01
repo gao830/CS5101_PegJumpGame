@@ -5,15 +5,9 @@
 #include <list>
 #include "View.h"
 
-class ViewObserver {
-    public:
-        virtual void itemsRequested(int numItems) = 0;
-};
-
 class View {
     public:
         View();
-        ViewObserver *observer;
         void PromptUser();
         void pegJump(char array[]);
 //        void PrintItems();
