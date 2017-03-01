@@ -44,61 +44,76 @@ void Model::createMap(){
 char* Model::getBoard(){
     return board;
 }
+int Model::getScore() {
+    return score;
+}
+
+void Model::updateScore() {
+    score--;
+}
+
+void Model::resetScore() {
+    score = 14;
+}
+
+int Model::getCumScore() {
+    return cumScore;
+}
+
+void Model::updateCumScore() {
+    cumScore += score;
+}
 
 bool Model::checkMove(int startPosition, int endPosition) {
     if(moveMap.count(make_pair(startPosition, endPosition))) {
         return true;
     }
     else {
+        //           cerr "Invalid Move, Please Select Another Move.";
         return false;
     }
 }
 
 void  Model::makeMove(int startPosition, int endPosition) {
-	char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
+    char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
 	   if(checkMove(startPosition, endPosition)) {
-		   int middle = moveMap.at(make_pair(startPosition, endPosition));
-		   board[startPosition] = 0;
-		   board[endPosition] = alpha[endPosition-1];
-		   board[middle] = 0;
-	   }
+           int middle = moveMap.at(make_pair(startPosition, endPosition));
+           board[startPosition] = '0';
+           board[endPosition] = alpha[endPosition-1];
+           board[middle] = '0';
+       }
 }
+
+
 
 void Model::autoSolve() {
-	if(score == 14 ){
-		makeMove(4,1);
-		cout << "Position 4 to 1" << endl;
-		makeMove(6,4);
-		cout << "Position 6 to 4" << endl;
-		makeMove(1,6);
-		cout << "Position 1 to 6" << endl;
-		makeMove(7,2);
-		cout << "Position 7 to 2" << endl;
-		makeMove(13,4);
-		cout << "Position 13 to 4" << endl;
-		makeMove(2,7);
-		cout << "Position 2 to 7" << endl;
-		makeMove(10,8);
-		cout << "Position 10 to 8" << endl;
-		makeMove(7,9);
-		cout << "Position 7 to 9" << endl;
-		makeMove(15,13);
-		cout << "Position 15 to 13" << endl;
-		makeMove(12,14);
-		cout << "Position 12 to 14" << endl;
-		makeMove(6,13);
-		cout << "Position 6 to 13" << endl;
-		makeMove(14,12);
-		cout << "Position 14 to 12" << endl;
-		makeMove(11,13);
-		cout << "Position 11 to 13" << endl;
-
-		return;
-	} else {
-		return;
-	}
-
+       if(score == 14 ){
+        makeMove(4,1);
+        cout << "Position 4 to 1" << endl;
+        makeMove(6,4);
+        cout << "Position 6 to 4" << endl;
+        makeMove(1,6);
+        cout << "Position 1 to 6" << endl;
+        makeMove(7,2);
+        cout << "Position 7 to 2" << endl;
+        makeMove(13,4);
+        cout << "Position 13 to 4" << endl;
+        makeMove(2,7);
+        cout << "Position 2 to 7" << endl;
+        makeMove(10,8);
+        cout << "Position 10 to 8" << endl;
+        makeMove(7,9);
+        cout << "Position 7 to 9" << endl;
+        makeMove(15,13);
+        cout << "Position 15 to 13" << endl;
+        makeMove(12,14);
+        cout << "Position 12 to 14" << endl;
+        makeMove(6,13);
+        cout << "Position 6 to 13" << endl;
+        makeMove(14,12);
+        cout << "Position 14 to 12" << endl;
+        makeMove(11,13);
+        cout << "Position 11 to 13" << endl;
+    }
 }
-
-
 

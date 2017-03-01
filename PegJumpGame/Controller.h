@@ -6,17 +6,17 @@
 #include "Model.h"
 
 class Controller {
-    public:
-        Controller(View &inView);
-        void go();
-        void pegJumpController(Model model);
-        virtual void itemsRequested(int numItems);
-        char arrayOfElements[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
-    private:
-        View view;
-        Model model;
+public:
+    Controller(View &inView);
+    void go();
+    void pegJumpController(Model model);
+    void exitGame();
+    char arrayOfElements[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
+private:
+    View view;
+    Model model;
     
-//        KnapsackGenerator &generator;
+    //        KnapsackGenerator &generator;
     
 };
 

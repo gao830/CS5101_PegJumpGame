@@ -6,13 +6,14 @@
 #include "View.h"
 
 class View {
-    public:
-        View();
-        void PromptUser();
-        void pegJump(char array[]);
-//        void PrintItems();
-
-    private:
+public:
+    View();
+    void promptForAutoSolve();
+    void PromptUser();
+    void pegJump(char array[]);
+    //        void PrintItems();
+    
+private:
 };
 
 #endif

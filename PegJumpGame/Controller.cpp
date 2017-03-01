@@ -25,7 +25,7 @@ void Controller::go() {
         }
         
         else if(regex_match(selection,exitTyped)){
-            cout << "Exit" << endl;
+            exitGame();
         }
         else{
             view.PromptUser();
@@ -36,9 +36,36 @@ void Controller::go() {
 }
 
 void Controller::pegJumpController(Model model){
-    view.pegJump(model.getBoard());
+        view.promptForAutoSolve();
+    string input = "null";
+    while(input != "1" && input != "2"){
+        if(regex_match(input,exitTyped)){
+            exitGame();
+        }
+        cout<<"1. Yes"<<endl;
+        cout<<"2. No"<<endl;
+        cin>>input;
+    }
     //operation
+    
+    if(input == "1"){
+        cout<<"Auto solve"<<endl;
+        view.pegJump(model.getBoard());
+        model.autoSolve();
+        view.pegJump(model.getBoard());
+    }
+    
     
     
 }
+
+void Controller:: exitGame(){
+    cout << "Exit" << endl;
+    exit(0);
+    
+}
+
+
+
+
 
