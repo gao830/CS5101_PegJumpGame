@@ -12,6 +12,7 @@ class Model {
         bool checkMove(int startPosition, int endPosition);
         void makeMove(int startPosition, int endPosition);
         void createMap();
+        char* getBoard();
 
 
     private:

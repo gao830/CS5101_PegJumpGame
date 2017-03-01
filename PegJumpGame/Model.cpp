@@ -41,12 +41,15 @@ void Model::createMap(){
     moveMap[std::make_pair(15,13)] = 14;
 }
 
+char* Model::getBoard(){
+    return board;
+}
+
 bool Model::checkMove(int startPosition, int endPosition) {
     if(moveMap.count(make_pair(startPosition, endPosition))) {
         return true;
     }
     else {
-        //           cerr "Invalid Move, Please Select Another Move.";
         return false;
     }
 }

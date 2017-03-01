@@ -1,9 +1,10 @@
 #include <iostream>
 #include <regex>
-#include <tuple>
 #include <list>
 #include "Controller.h"
 using namespace std;
+
+static regex exitTyped("(e|E)(x|X)(i|I)(t|T)");
 
 Controller::Controller(View &view) {
     this->view = view;
@@ -11,19 +12,19 @@ Controller::Controller(View &view) {
 
 void Controller::go() {
     string selection = "0";
-    regex exit("(e|E)(x|X)(i|I)(t|T)");
+    
     
     view.PromptUser();
-    while (!regex_match(selection,exit)) {
+    while (!regex_match(selection,exitTyped)) {
         cin >> selection;
         
         if(selection == "1"){
-            pegJumpController(arrayOfElements);
+            pegJumpController(model);
             view.PromptUser();
             
         }
         
-        else if(regex_match(selection,exit)){
+        else if(regex_match(selection,exitTyped)){
             cout << "Exit" << endl;
         }
         else{
@@ -34,13 +35,10 @@ void Controller::go() {
     }
 }
 
-void Controller::pegJumpController(char array[]){
-    view.pegJump(array);
+void Controller::pegJumpController(Model model){
+    view.pegJump(model.getBoard());
+    //operation
+    
+    
 }
 
-
-// View Observer
-void Controller::itemsRequested(int numItems) {
-    //    std::list< std::tuple<float, float> > items = generator.getItems(numItems);
-    //    view.PrintItems(items);
-}

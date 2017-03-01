@@ -9,12 +9,13 @@ class Controller {
     public:
         Controller(View &inView);
         void go();
-        void pegJumpController(char array[]);
+        void pegJumpController(Model model);
         virtual void itemsRequested(int numItems);
         char arrayOfElements[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
     private:
         View view;
         Model model;
+    
 //        KnapsackGenerator &generator;
     
 };
