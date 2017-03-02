@@ -1,9 +1,10 @@
 #include <iostream>
 #include <regex>
-#include <tuple>
 #include <list>
 #include "Controller.h"
 using namespace std;
+
+static regex exitTyped("(e|E)(x|X)(i|I)(t|T)");
 
 Controller::Controller(View &view) {
     this->view = view;
@@ -11,20 +12,20 @@ Controller::Controller(View &view) {
 
 void Controller::go() {
     string selection = "0";
-    regex exit("(e|E)(x|X)(i|I)(t|T)");
+    
     
     view.PromptUser();
-    while (!regex_match(selection,exit)) {
+    while (!regex_match(selection,exitTyped)) {
         cin >> selection;
         
         if(selection == "1"){
-            pegJumpController(arrayOfElements);
+            pegJumpController(model);
             view.PromptUser();
             
         }
         
-        else if(regex_match(selection,exit)){
-            cout << "Exit" << endl;
+        else if(regex_match(selection,exitTyped)){
+            exitGame();
         }
         else{
             view.PromptUser();
@@ -34,13 +35,37 @@ void Controller::go() {
     }
 }
 
-void Controller::pegJumpController(char array[]){
-    view.pegJump(array);
+void Controller::pegJumpController(Model model){
+        view.promptForAutoSolve();
+    string input = "null";
+    while(input != "1" && input != "2"){
+        if(regex_match(input,exitTyped)){
+            exitGame();
+        }
+        cout<<"1. Yes"<<endl;
+        cout<<"2. No"<<endl;
+        cin>>input;
+    }
+    //operation
+    
+    if(input == "1"){
+        cout<<"Auto solve"<<endl;
+        view.pegJump(model.getBoard());
+        model.autoSolve();
+        view.pegJump(model.getBoard());
+    }
+    
+    
+    
+}
+
+void Controller:: exitGame(){
+    cout << "Exit" << endl;
+    exit(0);
+    
 }
 
 
-// View Observer
-void Controller::itemsRequested(int numItems) {
-    //    std::list< std::tuple<float, float> > items = generator.getItems(numItems);
-    //    view.PrintItems(items);
-}
+
+
+

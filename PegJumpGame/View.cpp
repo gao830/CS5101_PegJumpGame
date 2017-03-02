@@ -17,6 +17,11 @@ void View::PromptUser() {
     return;
 }
 
+void View::promptForAutoSolve(){
+    cout << "Do you want to auto solve the game?"<<endl;
+    
+}
+
 void View::pegJump(char array[]) {
 //    char position = 'A';
     int m = 0;
