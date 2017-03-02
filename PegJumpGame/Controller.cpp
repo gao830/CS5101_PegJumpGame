@@ -11,6 +11,8 @@ Controller::Controller(View &view) {
 }
 
 void Controller::go() {
+    //    cout<< cumScore<<endl;
+    
     string selection = "0";
     
     
@@ -43,8 +45,6 @@ void Controller::pegJumpController(Model model){
         if(regex_match(input,exitTyped)){
             exitGame();
         }
-        cout<<"1. Yes"<<endl;
-        cout<<"2. No"<<endl;
         cin>>input;
     }
     //operation
@@ -57,28 +57,45 @@ void Controller::pegJumpController(Model model){
     }
     else {
         cout<<"Player play games"<<endl;
-        view.pegJump(model.getBoard());
+        view.pegJump(model.getBoard(), model.getScore(), cumScore);
+        model.resetScore();
         string startPosition, endPosition;
-        while (!regex_match(startPosition,exitTyped) && !regex_match(endPosition,exitTyped)) {
+        while (!regex_match(startPosition,exitTyped) && !regex_match(endPosition,exitTyped)
+               && model.getScore()!=1) {
             bool judge = false;
             while(!judge){
-                cout<<"Enter starting position"<<endl;
+                cout<<"Enter starting position(alphabet A to O(Uppercase)"<<endl;
                 cin >> startPosition;
                 if(regex_match(startPosition,exitTyped)){
-                    exitGame();
+                    break;
                 }
-                cout<<"Enter ending position"<<endl;
+                cout<<"Enter ending position(alphabet A to O(Uppercase)"<<endl;
                 cin >> endPosition;
                 if(regex_match(endPosition,exitTyped)){
-                    exitGame();
+                    break;
                 }
                 judge = model.makeMove(startPosition, endPosition);
                 
             }
             
-            view.pegJump(model.getBoard());
+            view.pegJump(model.getBoard(), model.getScore(), cumScore);
         }
-        
+        input = "null";
+        while(input != "1" && input != "2"){
+            cout<<"Do you want to play another game?"<<endl;
+            cout<<"1. Yes"<<endl;
+            cout<<"2. No"<<endl;
+            cin>>input;
+        }
+        if (input == "1"){
+            
+            cumScore+=model.getScore();
+            go();
+        }
+        else{
+            exitGame();
+            
+        }
         
     }
     

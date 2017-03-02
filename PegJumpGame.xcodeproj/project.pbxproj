@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FC0DC5901E674F99000DAD6F /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC0DC58E1E674F99000DAD6F /* Model.cpp */; };
 		FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB8809B1E64A4F300D7F7ED /* Controller.cpp */; };
-		FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */; };
 		FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880A31E64A4F300D7F7ED /* View.cpp */; };
 		FCB880B11E64A75400D7F7ED /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCB880B01E64A75400D7F7ED /* Main.cpp */; };
 /* End PBXBuildFile section */
@@ -32,9 +31,6 @@
 		FCB880831E6496DA00D7F7ED /* PegJumpGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PegJumpGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB8809B1E64A4F300D7F7ED /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		FCB8809C1E64A4F300D7F7ED /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
-		FCB880A01E64A4F300D7F7ED /* RandomNumberGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGenerator.h; sourceTree = "<group>"; };
-		FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomNumberGeneratorImpl.cpp; sourceTree = "<group>"; };
-		FCB880A21E64A4F300D7F7ED /* RandomNumberGeneratorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomNumberGeneratorImpl.h; sourceTree = "<group>"; };
 		FCB880A31E64A4F300D7F7ED /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
 		FCB880A41E64A4F300D7F7ED /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		FCB880AA1E64A51100D7F7ED /* mainTest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mainTest; path = ../mainTest; sourceTree = "<group>"; };
@@ -77,9 +73,6 @@
 				FC0DC58F1E674F99000DAD6F /* Model.h */,
 				FCB8809B1E64A4F300D7F7ED /* Controller.cpp */,
 				FCB8809C1E64A4F300D7F7ED /* Controller.h */,
-				FCB880A01E64A4F300D7F7ED /* RandomNumberGenerator.h */,
-				FCB880A11E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp */,
-				FCB880A21E64A4F300D7F7ED /* RandomNumberGeneratorImpl.h */,
 				FCB880A31E64A4F300D7F7ED /* View.cpp */,
 				FCB880A41E64A4F300D7F7ED /* View.h */,
 			);
@@ -144,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB880A91E64A4F300D7F7ED /* View.cpp in Sources */,
-				FCB880A81E64A4F300D7F7ED /* RandomNumberGeneratorImpl.cpp in Sources */,
 				FC0DC5901E674F99000DAD6F /* Model.cpp in Sources */,
 				FCB880A51E64A4F300D7F7ED /* Controller.cpp in Sources */,
 				FCB880B11E64A75400D7F7ED /* Main.cpp in Sources */,

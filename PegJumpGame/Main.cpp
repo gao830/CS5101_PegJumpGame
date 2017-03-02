@@ -7,7 +7,6 @@
 #include <map>
 #include <algorithm>
 #include <iterator>
-#include "RandomNumberGeneratorImpl.h"
 #include "View.h"
 #include "Controller.h"
 
