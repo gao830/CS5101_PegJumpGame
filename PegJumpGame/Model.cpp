@@ -65,18 +65,21 @@ void Model::updateCumScore() {
 }
 
 bool Model::checkMove(int startPosition, int endPosition) {
-    if(moveMap.count(make_pair(startPosition, endPosition))) {
-        return true;
+    // cout<<"Check"<<endl;
+    //    cout<<startPosition;
+    //    cout<<endPosition;
+    if(moveMap.find(make_pair(startPosition, endPosition))==moveMap.end()) {
+        return false;
     }
     else {
-        //           cerr "Invalid Move, Please Select Another Move.";
-        return false;
+        return true;
     }
 }
 
-void  Model::makeMove(int startPosition, int endPosition) {
+void Model::makeMove(int startPosition, int endPosition) {
     char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
 	   if(checkMove(startPosition, endPosition)) {
+           cout<<"True"<<endl;
            int middle = moveMap.at(make_pair(startPosition, endPosition));
            board[startPosition] = '0';
            board[endPosition] = alpha[endPosition-1];
@@ -84,10 +87,29 @@ void  Model::makeMove(int startPosition, int endPosition) {
        }
 }
 
+bool Model::makeMove(string startPosition, string endPosition) {
+    char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
+    cout << alpha[2];
+    //    int *startIndex = find(alpha, alpha+15, 'd');
+    char start = startPosition.at(0);
+    char ending = endPosition.at(0);
+    auto iterator = find(begin(alpha), end(alpha), start);
+    auto iterator2 = find(begin(alpha), end(alpha), ending);
 
+    if (iterator != end(alpha) && iterator2 != end(alpha)){
+//        cout << "Start: "<<(int) distance(begin(alpha), iterator ) << endl;
+//        cout << "End: " <<(int) distance(begin(alpha), iterator2 ) << endl;
+        makeMove((int)distance(begin(alpha), iterator)+1, (int)distance(begin(alpha), iterator2)+1);
+        return true;
+    }
+    else{
+        return false;
+    }
+    
+}
 
 void Model::autoSolve() {
-       if(score == 14 ){
+    if(score == 14 ){
         makeMove(4,1);
         cout << "Position 4 to 1" << endl;
         makeMove(6,4);

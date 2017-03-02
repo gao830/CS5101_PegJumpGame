@@ -5,6 +5,8 @@
 #include <iostream>
 #include <regex>
 #include <map>
+#include <algorithm>
+#include <iterator>
 #include "RandomNumberGeneratorImpl.h"
 #include "View.h"
 #include "Controller.h"
@@ -16,21 +18,12 @@ void pegJump();
 
 int main(int argc, const char * argv[]) {
     
-    RandomNumberGeneratorImpl gen(rand, srand);
-    map<char,int> mymap;
-    
-    // first insert function version (single parameter):
-    mymap.insert ( std::pair<char,int>('a',100) );
     View view;
     Controller controller(view);
     
     controller.go();
     
-//    cout << "DONE!!!!!!" << endl;
-    
-//    playGames();
-//    
-//    cout << endl;
+    cout << endl;
     return 0;
 }
 

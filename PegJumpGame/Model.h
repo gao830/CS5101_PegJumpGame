@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <map>
+#include <algorithm>
+#include <iterator>
 using namespace std;
 
 
@@ -24,6 +26,7 @@ class Model {
 public:
     bool checkMove(int startPosition, int endPosition);
     void makeMove(int startPosition, int endPosition);
+    bool makeMove(string startPosition, string endPosition);
     void createMap();
     char* getBoard();
     int getScore();
