@@ -25,7 +25,11 @@ void View::promptForAutoSolve(){
 void View::pegJump(char array[]) {
 //    char position = 'A';
     int m = 0;
+    cout<<endl;
+    cout << endl;
     for(int i=1; i<=5; i++){
+        
+        cout << "  ";
         for(int j=0; j<5-i; j++){
             cout << " ";
         }
@@ -36,6 +40,8 @@ void View::pegJump(char array[]) {
         }
         cout << endl;
     }
+    cout << endl;
+    cout << endl;
 }
 
 

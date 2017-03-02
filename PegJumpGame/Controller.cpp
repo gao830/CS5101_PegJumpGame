@@ -36,8 +36,9 @@ void Controller::go() {
 }
 
 void Controller::pegJumpController(Model model){
-        view.promptForAutoSolve();
+    view.promptForAutoSolve();
     string input = "null";
+    model.createMap();
     while(input != "1" && input != "2"){
         if(regex_match(input,exitTyped)){
             exitGame();
@@ -53,6 +54,32 @@ void Controller::pegJumpController(Model model){
         view.pegJump(model.getBoard());
         model.autoSolve();
         view.pegJump(model.getBoard());
+    }
+    else {
+        cout<<"Player play games"<<endl;
+        view.pegJump(model.getBoard());
+        string startPosition, endPosition;
+        while (!regex_match(startPosition,exitTyped) && !regex_match(endPosition,exitTyped)) {
+            bool judge = false;
+            while(!judge){
+                cout<<"Enter starting position"<<endl;
+                cin >> startPosition;
+                if(regex_match(startPosition,exitTyped)){
+                    exitGame();
+                }
+                cout<<"Enter ending position"<<endl;
+                cin >> endPosition;
+                if(regex_match(endPosition,exitTyped)){
+                    exitGame();
+                }
+                judge = model.makeMove(startPosition, endPosition);
+                
+            }
+            
+            view.pegJump(model.getBoard());
+        }
+        
+        
     }
     
     
