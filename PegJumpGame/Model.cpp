@@ -81,15 +81,14 @@ void Model::makeMove(int startPosition, int endPosition) {
 	   if(checkMove(startPosition, endPosition)) {
            cout<<"True"<<endl;
            int middle = moveMap.at(make_pair(startPosition, endPosition));
-           board[startPosition] = '0';
-           board[endPosition] = alpha[endPosition-1];
-           board[middle] = '0';
+           board[startPosition-1] = '0';
+           board[endPosition-1] = '1';
+           board[middle-1] = '0';
        }
 }
 
 bool Model::makeMove(string startPosition, string endPosition) {
     char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
-    cout << alpha[2];
     //    int *startIndex = find(alpha, alpha+15, 'd');
     char start = startPosition.at(0);
     char ending = endPosition.at(0);

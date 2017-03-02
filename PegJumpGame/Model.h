@@ -40,7 +40,7 @@ public:
     
 private:
     std::map<pair<int,int>, int> moveMap;
-    char board[15] = {'0','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
+    char board[15] = {'0','1','1','1','1','1','1','1','1','1','1','1','1','1','1'};
     int score = 14;
     int cumScore;
 };
