@@ -14,14 +14,14 @@
 #include <cppunit/XmlOutputter.h>
 #include <netinet/in.h>
 
-#include "TestRandom.h"
-#include "KnapsackGeneratorTest.h"
+
+#include "PegJumpGame.h"
 
 using namespace CppUnit;
 using namespace std;
 
-CPPUNIT_TEST_SUITE_REGISTRATION(TestRandom);
-CPPUNIT_TEST_SUITE_REGISTRATION(KnapsackGeneratorTest);
+
+CPPUNIT_TEST_SUITE_REGISTRATION(PegJumpTest);
 
 int main(int argc, char* argv[])
 {
