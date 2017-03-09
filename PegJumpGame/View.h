@@ -10,6 +10,7 @@ public:
     View();
     void promptForAutoSolve();
     void PromptUser();
+    void pegJump(char array[], int currentScore, int cumScore);
     void pegJump(char array[]);
     //        void PrintItems();
     

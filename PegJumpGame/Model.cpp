@@ -61,7 +61,10 @@ int Model::getCumScore() {
 }
 
 void Model::updateCumScore() {
+    cout << "update"<<endl;
+    cout<<score<<endl;
     cumScore += score;
+    cout<<cumScore<<endl;
 }
 
 bool Model::checkMove(int startPosition, int endPosition) {
@@ -77,13 +80,14 @@ bool Model::checkMove(int startPosition, int endPosition) {
 }
 
 void Model::makeMove(int startPosition, int endPosition) {
-    char alpha[15] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'};
+    
 	   if(checkMove(startPosition, endPosition)) {
            cout<<"True"<<endl;
            int middle = moveMap.at(make_pair(startPosition, endPosition));
            board[startPosition-1] = '0';
            board[endPosition-1] = '1';
            board[middle-1] = '0';
+           updateScore();
        }
 }
 

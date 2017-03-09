@@ -15,8 +15,7 @@ public:
 private:
     View view;
     Model model;
-    
-    //        KnapsackGenerator &generator;
+    int cumScore = 0;
     
 };
 
