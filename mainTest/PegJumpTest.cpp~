@@ -1,7 +1,7 @@
 #include <iostream>
 #include <unistd.h>
 #include "PegJumpTest.h"
-#include "Model.h"
+#include "PegJumpGame/Model.h"
 
 using namespace std;
 
@@ -14,8 +14,6 @@ void PegJumpTest::tearDown() {
 
 void PegJumpTest::testThatPegJumpWorks() {
     Model model;
-    model.createMap();
-	bool ans = model.checkMove(40,1);
-    CPPUNIT_ASSERT(ans);
+    CPPUNIT_ASSERT(model.checkMove(1,2));
 }
 

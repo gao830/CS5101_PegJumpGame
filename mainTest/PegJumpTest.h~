@@ -16,7 +16,7 @@ public:
     void tearDown(void);
 
 protected:
-    void testThatPegJumpWorks();
+    void testThatPegJumpWorks
 
 private:
 
