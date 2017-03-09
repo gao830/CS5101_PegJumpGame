@@ -15,7 +15,7 @@ void PegJumpTest::tearDown() {
 void PegJumpTest::testThatPegJumpWorks() {
     Model model;
     model.createMap();
-	bool ans = model.checkMove(40,1);
+	bool ans = model.checkMove(1,4);
     CPPUNIT_ASSERT(ans);
 }
 
